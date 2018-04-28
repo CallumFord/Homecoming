@@ -9,22 +9,17 @@ public class EnterBattle {
     private  BaseEnemy Enemy3 = new BaseEnemy();
 
     //Transitions the game the the battle scene and loads the relevent enemy data
-    public void BattleStart(BaseEnemyClass EnemyClass1, BaseEnemyClass EnemyClass2, BaseEnemyClass EnemyClass3)
+    public void BattleStart(List<BaseEnemyClass> Enemies)
     {
-        CreateNewEnemy(EnemyClass1, Enemy1);
-        if (EnemyClass2 != null)
+        foreach(BaseEnemyClass Enemy in Enemies)
         {
-            CreateNewEnemy(EnemyClass2, Enemy2);
-        }
-        if (EnemyClass3 != null)
-        {
-            CreateNewEnemy(EnemyClass3, Enemy3);
+            CreateNewEnemy(Enemy);
         }
     }
 
-    private void CreateNewEnemy(BaseEnemyClass EnemyClass, BaseEnemy Enemy)
+    private void CreateNewEnemy(BaseEnemyClass EnemyClass)
     {
-        Enemy.EnemyName = EnemyClass.EnemyName;
-        Enemy.EnemyClass = EnemyClass;
+        Enemy1.EnemyName = EnemyClass.EnemyName;
+        Enemy1.EnemyClass = EnemyClass;
     }
 }

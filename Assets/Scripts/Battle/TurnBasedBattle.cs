@@ -32,7 +32,13 @@ public class TurnBasedBattle : MonoBehaviour
         {
             case (Battle.Start):
                 CreatePlayer();
-                EnterBattleScript.BattleStart(new BaseSkeleton(), null ,new BaseSkeleton());
+
+                //Gives a list of enemies to be created when the battle starts, will need overhauling
+                var EnemyList = new List<BaseEnemyClass>();
+                EnemyList.Add(new BaseSkeleton());
+                EnemyList.Add(new BaseSkeleton());
+                EnterBattleScript.BattleStart(EnemyList);
+                CreateSequence.CreateTestSequence();
                 currentState = Battle.PlayerTurn;
                 break;
             case (Battle.PlayerTurn):
