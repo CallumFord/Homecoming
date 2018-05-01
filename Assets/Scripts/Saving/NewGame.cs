@@ -18,6 +18,10 @@ public class NewGame
         Player3.PlayerClass = new BaseAcademicClass();
         Player4.PlayerClass = new BaseAthleteClass();
 
+        GameInformation.Player2 = 0;
+        GameInformation.Player3 = 0;
+        GameInformation.Player4 = 0;
+
         Player1.CurrentExp = 0;
         Player2.CurrentExp = 0;
         Player3.CurrentExp = 0;
@@ -50,8 +54,8 @@ public class NewGame
         GameInformation.Health2 = Player2.PlayerClass.Health;
         GameInformation.Magic2 = Player2.PlayerClass.Magic;
         GameInformation.Equipment2Weapon = new BaseGibbonLesPaul();
-        GameInformation.Equipment2Armour = null;
-        GameInformation.Equipment2Accessory = null;
+        GameInformation.Equipment2Armour = new BaseGibbonLesPaul();
+        GameInformation.Equipment2Accessory = new BaseGibbonLesPaul();
 
         //Sets base stats and starting equipment for player 3
         GameInformation.Player3Name = "Dean";
@@ -63,8 +67,8 @@ public class NewGame
         GameInformation.Health3 = Player3.PlayerClass.Health;
         GameInformation.Magic3 = Player3.PlayerClass.Magic;
         GameInformation.Equipment3Weapon = new BaseFist();
-        GameInformation.Equipment3Armour = null;
-        GameInformation.Equipment3Accessory = null;
+        GameInformation.Equipment3Armour = new BaseFist();
+        GameInformation.Equipment3Accessory = new BaseFist();
 
         //Sets base stats and starting equipment for player 4
         GameInformation.Player4Name = "Nathan";
@@ -76,8 +80,8 @@ public class NewGame
         GameInformation.Health4 = Player4.PlayerClass.Health;
         GameInformation.Magic4 = Player4.PlayerClass.Magic;
         GameInformation.Equipment4Weapon = new BaseBaseballBat();
-        GameInformation.Equipment4Armour = null;
-        GameInformation.Equipment4Accessory = null;
+        GameInformation.Equipment4Armour = new BaseBaseballBat();
+        GameInformation.Equipment4Accessory = new BaseBaseballBat();
     }
 
 }

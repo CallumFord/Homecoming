@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour {
         if (Input.GetKey("s"))
         {
             transform.Translate((Vector2.down) * moveSpeed * Time.deltaTime);
+            
         }
         if (Input.GetKeyDown("z"))
         {

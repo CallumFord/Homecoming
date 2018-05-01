@@ -4,48 +4,28 @@ using UnityEngine;
 
 public class BaseNote : MonoBehaviour {
 
-    public enum NoteColumns //The possible keys which the player can press to target notes
+    public enum NoteDirections //The possible keys which the player can press to target notes
     {
         LEFT,
         UP,
         DOWN,
         RIGHT
     }
-    private NoteColumns noteColumn; //Which key the player will have to press to hit this note
-    private int speed; //The speed of the note
-    private int damage; //The base damage the note will inflict (Before target defence)
-    private int target; //The targeted player
-    private CircleCollider2D noteCollision; //The collider around the note that detects whether it is touching the key-pad for that column
-    private Sprite sprite = Resources.Load("bbbbbbb 1", typeof(Sprite)) as Sprite; //The image used to represent the note in-game
+    
+    public enum NoteTypes //The possible types of notes
+    {
+        BASIC, //Standard note, no special properties
+        FIRE, //Will temporarily prevent the player from playing subsequent notes, ensuring additional damage
+        SHOCK, //Will damage all players, not just the targeted player
+        POISON, //Will damage the player if played, will not damage the player if allowed to pass unplayed
+        PHASE //Will change direction half-way to the player input region
+    }
 
-    public NoteColumns NoteColumn
-    {
-        get { return noteColumn; }
-        set { noteColumn = value; }
-    }
-    public int Speed
-    {
-        get { return speed; }
-        set { speed = value; }
-    }
-    public int Damage
-    {
-        get { return damage; }
-        set { damage = value; }
-    }
-    public int Target
-    {
-        get { return target; }
-        set { target = value; }
-    }
-    public CircleCollider2D NoteCollision
-    {
-        get { return noteCollision; }
-        set { noteCollision = value; }
-    }
-     Sprite Sprite
-    {
-        get { return sprite; }
-        set { sprite = value; }
-    }
+    public NoteDirections NoteDirection { get; set; } //Which key the player will have to press to hit this note
+    public NoteTypes NoteType { get; set; } //The type of this note
+    public int Speed { get; set; }  //The speed of the note
+    public int Damage { get; set; } //The base damage the note will inflict (Before target defence)
+    public int Target { get; set; } //The targeted player
+    public CircleCollider2D NoteCollision { get; set; } //The collider around the note that detects whether it is touching the key-pad for that column
+    Sprite Sprite { get; set; } //The image used to represent the note in-game
 }

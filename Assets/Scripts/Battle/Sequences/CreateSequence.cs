@@ -8,18 +8,19 @@ public class CreateSequence : BaseNote
     public static void CreateTestSequence()
     {
         List<BaseNote> sequence = new List<BaseNote>();
-        sequence.Add(CreateNote(NoteColumns.LEFT, 2, 3, 1));
-        sequence.Add(CreateNote(NoteColumns.RIGHT, 2, 3, 1));
-        sequence.Add(CreateNote(NoteColumns.UP, 2, 3, 1));
-        sequence.Add(CreateNote(NoteColumns.DOWN, 2, 3, 1));
+        sequence.Add(CreateNote(NoteDirections.LEFT, NoteTypes.BASIC, 2, 3, 1));
+        sequence.Add(CreateNote(NoteDirections.RIGHT, NoteTypes.FIRE, 2, 3, 1));
+        sequence.Add(CreateNote(NoteDirections.UP, NoteTypes.SHOCK, 2, 3, 1));
+        sequence.Add(CreateNote(NoteDirections.DOWN, NoteTypes.POISON, 2, 3, 1));
         CreateNoteSequence(sequence, 120);
     }
 
     //A function which creates notes and allocates them their individual properties. These will later be added to Sequence
-    private static BaseNote CreateNote(NoteColumns Direction, int Speed, int Damage, int Target)
+    private static  BaseNote CreateNote(NoteDirections Direction, NoteTypes Type, int Speed, int Damage, int Target)
     {
         BaseNote newNote = new BaseNote();
-        newNote.NoteColumn = Direction;
+        newNote.NoteDirection = Direction;
+        newNote.NoteType = Type;
         newNote.Speed = Speed;
         newNote.Damage = Damage;
         newNote.Target = Target;
@@ -29,40 +30,69 @@ public class CreateSequence : BaseNote
     //Generates each note in Sequence at intervals specified by the bpm of the sequence
     private static void CreateNoteSequence(List<BaseNote> Sequence, int bpm)
     {
-        float noteSpacing = (bpm / 60);
+        float noteSpacing = (bpm / 60); //
         foreach (BaseNote Note in Sequence)
         {
-            //Creates a GameObject to represent the note and assigns the properties of the note to the object
-            int xpos = new int();
-            switch (Note.NoteColumn)
+        
+            int xpos = new int(); //Assigns a starting x position for the note based on its direction
+            switch (Note.NoteDirection)
             {
-                case (NoteColumns.LEFT):
+                case (NoteDirections.LEFT):
                     {
                         xpos = -3;
                         break;
                     }
-                case (NoteColumns.UP):
+                case (NoteDirections.UP):
                     {
                         xpos = -1;
                         break;
                     }
-                case (NoteColumns.DOWN):
+                case (NoteDirections.DOWN):
                     {
                         xpos = +1;
                         break;
                     }
-                case (NoteColumns.RIGHT):
+                case (NoteDirections.RIGHT):
                     {
                         xpos = +3;
                         break;
                     }
             }
-            Vector3 position = new Vector3(xpos, +1f, 0);
 
-            Debug.Log("NOTE");
-            GameObject newNote = (GameObject)Instantiate(Resources.Load("bbbbbb 1"), position, new Quaternion());
+            string type = ""; //Assigns a representative type to the note based on its type
+            switch(Note.NoteType)
+            {
+                case (NoteTypes.BASIC):
+                    {
+                        type = "Note_Basic";
+                        break;
+                    }
+                case (NoteTypes.FIRE):
+                    {
+                        type = "Note_Fire";
+                        break;
+                    }
+                case (NoteTypes.SHOCK):
+                    {
+                        type = "Note_Shock";
+                        break;
+                    }
+                case (NoteTypes.POISON):
+                    {
+                        type = "Note_Poison";
+                        break;
+                    }
+                case (NoteTypes.PHASE):
+                    {
+                        type = "Note_Phase";
+                        break;
+                    }
+            }
+            Vector3 position = new Vector3(xpos, +1f, 0);
+            GameObject newNote = (GameObject)Instantiate(Resources.Load(type), position, new Quaternion());
         }
     }
+   
 }
 
 

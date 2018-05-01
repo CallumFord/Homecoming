@@ -282,11 +282,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Battle\CreatePlayerDisplay.cs" />
     <Compile Include="Assets\Scripts\Battle\EnterBattle.cs" />
     <Compile Include="Assets\Scripts\Battle\Sequences\BaseNote.cs" />
     <Compile Include="Assets\Scripts\Battle\Sequences\BaseSequence.cs" />
     <Compile Include="Assets\Scripts\Battle\Sequences\CreateSequence.cs" />
-    <Compile Include="Assets\Scripts\Battle\Sequences\TestNote.cs" />
+    <Compile Include="Assets\Scripts\Battle\Sequences\PlaySequence.cs" />
     <Compile Include="Assets\Scripts\Battle\TurnBasedBattle.cs" />
     <Compile Include="Assets\Scripts\Character\BasePlayer.cs" />
     <Compile Include="Assets\Scripts\Character\Classes\BaseAcademicClass.cs" />
