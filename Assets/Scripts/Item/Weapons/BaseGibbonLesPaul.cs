@@ -10,8 +10,8 @@ public class BaseGibbonLesPaul : BaseWeapon {
         ItemName = "Gibbon Les Paul";
         ItemDescription = "Good for a bit of monkeying around";
         ItemID = 11;
-        ItemType = ItemTypes.Weapon;
-        WeaponType = WeaponTypes.Guitar;
+        ItemType = ItemEnumerator.ItemTypes.Weapon;
+        WeaponType = WeaponEnumerator.WeaponTypes.Guitar;
         Attack = 7;
         Defence = 0;
         Health = 0;

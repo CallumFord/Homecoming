@@ -5,72 +5,16 @@ using UnityEngine;
 [System.Serializable]
 public class BaseItem
 {
-    private string itemName; //The name of the item as it appears in-game
-    private string itemDescription; //The item's in-game description
-    private int itemID; //Item ID (For inventory sorting)
-
-    public enum ItemTypes
-    {
-        Weapon,
-        Armour,
-        Accessory,
-        Consumable,
-        Quest
-    }
-    private ItemTypes itemType; //The type of item
+    public string ItemName { get; set; } //The name of the item as it appears in-game
+    public string ItemDescription { get; set; } //The item's in-game description
+    public int ItemID { get; set; } //Item ID (For inventory sorting)
+    public ItemEnumerator.ItemTypes ItemType { get; set; } //The type of item
 
     //The stat increases when item is equipped (Or used in the case of consumables)
-    private int attack;
-    private int defence;
-    private int health;
-    private int magic;
+    public int Attack { get; set; } //The name of the item as it appears in-game
+    public int Defence { get; set; }
+    public int Health { get; set; }
+    public int Magic { get; set; }
 
-    private int price; //Item value for buying/selling
-
-    public string ItemName
-    {
-        get{ return itemName;}
-        set { itemName = value; }
-    }
-    public string ItemDescription
-    {
-        get { return itemDescription; }
-        set { itemDescription = value;}
-    }
-    public int ItemID
-    {
-        get { return itemID; }
-        set { itemID = value;}
-    } 
-    public ItemTypes ItemType
-    {
-        get { return itemType; }
-        set { itemType = value; }
-    }
-
-    public int Attack
-    {
-        get { return attack; }
-        set { attack = value; }
-    }
-    public int Defence
-    {
-        get { return defence; }
-        set { defence = value; }
-    }
-    public int Health
-    {
-        get { return health; }
-        set { health = value; }
-    }
-    public int Magic
-    {
-        get { return magic; }
-        set { magic = value; }
-    }
-    public int Price
-    {
-        get { return price; }
-        set { price = value; }
-    }
+    public int Price { get; set; } //Item value for buying/selling
 }

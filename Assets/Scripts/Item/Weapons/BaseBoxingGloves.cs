@@ -10,8 +10,8 @@ public class BaseBoxingGloves : BaseWeapon {
         ItemName = "Boxing Gloves";
         ItemDescription = "A Pair of Boxing Gloves";
         ItemID = 2;
-        ItemType = ItemTypes.Weapon;
-        WeaponType = WeaponTypes.Fist;
+        ItemType = ItemEnumerator.ItemTypes.Weapon;
+        WeaponType = WeaponEnumerator.WeaponTypes.Fist;
         Attack = 10;
         Defence = 0;
         Health = 0;

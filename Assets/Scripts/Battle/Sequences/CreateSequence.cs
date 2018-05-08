@@ -8,15 +8,15 @@ public class CreateSequence : BaseNote
     public static void CreateTestSequence()
     {
         List<BaseNote> sequence = new List<BaseNote>();
-        sequence.Add(CreateNote(NoteDirections.LEFT, NoteTypes.BASIC, 2, 3, 1));
-        sequence.Add(CreateNote(NoteDirections.RIGHT, NoteTypes.FIRE, 2, 3, 1));
-        sequence.Add(CreateNote(NoteDirections.UP, NoteTypes.SHOCK, 2, 3, 1));
-        sequence.Add(CreateNote(NoteDirections.DOWN, NoteTypes.POISON, 2, 3, 1));
+        sequence.Add(CreateNote(DirectionEnumerator.NoteDirections.LEFT, TypeEnumerator.NoteTypes.BASIC, 2, 3, 1));
+        sequence.Add(CreateNote(DirectionEnumerator.NoteDirections.RIGHT, TypeEnumerator.NoteTypes.FIRE, 2, 3, 1));
+        sequence.Add(CreateNote(DirectionEnumerator.NoteDirections.UP, TypeEnumerator.NoteTypes.SHOCK, 2, 3, 1));
+        sequence.Add(CreateNote(DirectionEnumerator.NoteDirections.DOWN, TypeEnumerator.NoteTypes.POISON, 2, 3, 1));
         CreateNoteSequence(sequence, 120);
     }
 
     //A function which creates notes and allocates them their individual properties. These will later be added to Sequence
-    private static  BaseNote CreateNote(NoteDirections Direction, NoteTypes Type, int Speed, int Damage, int Target)
+    private static  BaseNote CreateNote(DirectionEnumerator.NoteDirections Direction, TypeEnumerator.NoteTypes Type, int Speed, int Damage, int Target)
     {
         BaseNote newNote = new BaseNote();
         newNote.NoteDirection = Direction;
@@ -37,22 +37,22 @@ public class CreateSequence : BaseNote
             int xpos = new int(); //Assigns a starting x position for the note based on its direction
             switch (Note.NoteDirection)
             {
-                case (NoteDirections.LEFT):
+                case (DirectionEnumerator.NoteDirections.LEFT):
                     {
                         xpos = -3;
                         break;
                     }
-                case (NoteDirections.UP):
+                case (DirectionEnumerator.NoteDirections.UP):
                     {
                         xpos = -1;
                         break;
                     }
-                case (NoteDirections.DOWN):
+                case (DirectionEnumerator.NoteDirections.DOWN):
                     {
                         xpos = +1;
                         break;
                     }
-                case (NoteDirections.RIGHT):
+                case (DirectionEnumerator.NoteDirections.RIGHT):
                     {
                         xpos = +3;
                         break;
@@ -62,27 +62,27 @@ public class CreateSequence : BaseNote
             string type = ""; //Assigns a representative type to the note based on its type
             switch(Note.NoteType)
             {
-                case (NoteTypes.BASIC):
+                case (TypeEnumerator.NoteTypes.BASIC):
                     {
                         type = "Note_Basic";
                         break;
                     }
-                case (NoteTypes.FIRE):
+                case (TypeEnumerator.NoteTypes.FIRE):
                     {
                         type = "Note_Fire";
                         break;
                     }
-                case (NoteTypes.SHOCK):
+                case (TypeEnumerator.NoteTypes.SHOCK):
                     {
                         type = "Note_Shock";
                         break;
                     }
-                case (NoteTypes.POISON):
+                case (TypeEnumerator.NoteTypes.POISON):
                     {
                         type = "Note_Poison";
                         break;
                     }
-                case (NoteTypes.PHASE):
+                case (TypeEnumerator.NoteTypes.PHASE):
                     {
                         type = "Note_Phase";
                         break;

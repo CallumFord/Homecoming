@@ -10,8 +10,8 @@ public class BaseFist : BaseWeapon {
         ItemName = "Fist";
         ItemDescription = "Bare-knuckle, baby";
         ItemID = 1;
-        ItemType = ItemTypes.Weapon;
-        WeaponType = WeaponTypes.Fist;
+        ItemType = ItemEnumerator.ItemTypes.Weapon;
+        WeaponType = WeaponEnumerator.WeaponTypes.Fist;
         Attack = 5;
         Defence = 0;
         Health = 0;

@@ -4,25 +4,8 @@ using UnityEngine;
 
 public class BaseNote : MonoBehaviour {
 
-    public enum NoteDirections //The possible keys which the player can press to target notes
-    {
-        LEFT,
-        UP,
-        DOWN,
-        RIGHT
-    }
-    
-    public enum NoteTypes //The possible types of notes
-    {
-        BASIC, //Standard note, no special properties
-        FIRE, //Will temporarily prevent the player from playing subsequent notes, ensuring additional damage
-        SHOCK, //Will damage all players, not just the targeted player
-        POISON, //Will damage the player if played, will not damage the player if allowed to pass unplayed
-        PHASE //Will change direction half-way to the player input region
-    }
-
-    public NoteDirections NoteDirection { get; set; } //Which key the player will have to press to hit this note
-    public NoteTypes NoteType { get; set; } //The type of this note
+    public DirectionEnumerator.NoteDirections NoteDirection { get; set; } //Which key the player will have to press to hit this note
+    public TypeEnumerator.NoteTypes NoteType { get; set; } //The type of this note
     public int Speed { get; set; }  //The speed of the note
     public int Damage { get; set; } //The base damage the note will inflict (Before target defence)
     public int Target { get; set; } //The targeted player

@@ -10,8 +10,8 @@ public class BaseBaseballBat : BaseWeapon
         ItemName = "Baseball Bat";
         ItemDescription = "A Baseball Bat";
         ItemID = 5;
-        ItemType = ItemTypes.Weapon;
-        WeaponType = WeaponTypes.Bat;
+        ItemType = ItemEnumerator.ItemTypes.Weapon;
+        WeaponType = WeaponEnumerator.WeaponTypes.Bat;
         Attack = 20;
         Defence = 5;
         Health = 0;

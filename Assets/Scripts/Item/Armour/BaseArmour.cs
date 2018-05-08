@@ -5,24 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class BaseArmour : BaseItem
 {
-    public enum ArmourTypes
-    {
-        Shirt,
-        Jacket
-
-    }
-    private ArmourTypes armourType;
-    private int armourEffectID;
-
-    public ArmourTypes ArmourType
-    {
-        get { return armourType; }
-        set { armourType = value; }
-    }
-    public int WeaponEffectID
-    {
-        get { return armourEffectID; }
-        set { armourEffectID = value; }
-    }
+    public ArmourEnumerator.ArmourTypes ArmourType { get; set; } //The type of Armour
+    public int WeaponEffectID { get; set; } //The additional effect of your armour
 }
 

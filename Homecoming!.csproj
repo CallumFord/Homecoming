@@ -289,7 +289,9 @@
     <Compile Include="Assets\Scripts\Battle\Sequences\BaseNote.cs" />
     <Compile Include="Assets\Scripts\Battle\Sequences\BaseSequence.cs" />
     <Compile Include="Assets\Scripts\Battle\Sequences\CreateSequence.cs" />
+    <Compile Include="Assets\Scripts\Battle\Sequences\DirectionEnumerator.cs" />
     <Compile Include="Assets\Scripts\Battle\Sequences\PlaySequence.cs" />
+    <Compile Include="Assets\Scripts\Battle\Sequences\TypeEnumerator.cs" />
     <Compile Include="Assets\Scripts\Battle\TurnBasedBattle.cs" />
     <Compile Include="Assets\Scripts\Character\BasePlayer.cs" />
     <Compile Include="Assets\Scripts\Character\Classes\BaseAcademicClass.cs" />
@@ -301,13 +303,16 @@
     <Compile Include="Assets\Scripts\Enemy\BaseEnemy.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyClasses\BaseEnemyClass.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyClasses\BaseSkeleton.cs" />
+    <Compile Include="Assets\Scripts\Item\Armour\ArmourEnumerator.cs" />
     <Compile Include="Assets\Scripts\Item\Armour\BaseArmour.cs" />
     <Compile Include="Assets\Scripts\Item\BaseItem.cs" />
+    <Compile Include="Assets\Scripts\Item\ItemEnumerator.cs" />
     <Compile Include="Assets\Scripts\Item\Weapons\BaseBaseballBat.cs" />
     <Compile Include="Assets\Scripts\Item\Weapons\BaseBoxingGloves.cs" />
     <Compile Include="Assets\Scripts\Item\Weapons\BaseFist.cs" />
     <Compile Include="Assets\Scripts\Item\Weapons\BaseGibbonLesPaul.cs" />
     <Compile Include="Assets\Scripts\Item\Weapons\BaseWeapon.cs" />
+    <Compile Include="Assets\Scripts\Item\Weapons\WeaponEnumerator.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement\PlayerCollision.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Saving\GameInformation.cs" />

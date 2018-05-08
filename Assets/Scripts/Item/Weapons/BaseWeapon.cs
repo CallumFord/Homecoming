@@ -5,25 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class BaseWeapon : BaseItem
 {
-    public enum WeaponTypes
-    {
-        Fist,
-        Guitar,
-        Tech,
-        Bat
-    }
-    private WeaponTypes weaponType;
-    private int weaponEffectID;
 
-    public WeaponTypes WeaponType
-    {
-        get { return weaponType; }
-        set { weaponType = value;}
-    }
-    public int WeaponEffectID
-    {
-        get { return weaponEffectID;}
-        set { weaponEffectID = value;}
-    }
+    public WeaponEnumerator.WeaponTypes WeaponType { get; set; } //The type of weapon
+    public int WeaponEffectID { get; set; }  //The additional effect of the weapon
 }
 
