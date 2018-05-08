@@ -5,7 +5,7 @@ using UnityEngine;
 public class LevelUp {
 
     //Maximum Character Level and the experience required to achieve
-    private static int maxLevel = 100;
+    private static int maxLevel = 50;
     private static int minLevelExp = 20;
     private static int maxLevelExp = 40000;
 
@@ -43,11 +43,21 @@ public class LevelUp {
 
     private static int CalculateNewStats(int min, int max, int current)
     {
-        float c = max / min; ;
-        float b = Mathf.Log(c) / (maxLevel - 1);
-        float a = (min / Mathf.Exp(b));
-        int newStat =(int)(a * Mathf.Exp(b * current));
+        float x = 0.0835171f;
+        float y = 0.0498028f;
+        int newStat = max*(int)(x * Mathf.Exp(y * current));
+
+        //float c = max / min; ;
+        //float b = Mathf.Log(c) / (maxLevel - 1);
+        //float a = (min / Mathf.Exp(b));
+        //int newStat =(int)(a * Mathf.Exp(b * current));
 
         return newStat;
+    }
+    private static int CalculateRequiredExp(int min, int max, int current)
+    {
+        //New curve goes here
+        int newExp = 0;
+        return newExp;
     }
 }
