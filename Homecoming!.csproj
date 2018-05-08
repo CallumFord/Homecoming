@@ -301,8 +301,16 @@
     <Compile Include="Assets\Scripts\Enemy\BaseEnemy.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyClasses\BaseEnemyClass.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyClasses\BaseSkeleton.cs" />
+    <Compile Include="Assets\Scripts\Item\Accessories\AccessoryEnumerator.cs" />
+    <Compile Include="Assets\Scripts\Item\Accessories\BaseAccessory.cs" />
+    <Compile Include="Assets\Scripts\Item\Accessories\BaseLeatherBelt.cs" />
+    <Compile Include="Assets\Scripts\Item\Accessories\BaseSimpleNecklace.cs" />
+    <Compile Include="Assets\Scripts\Item\Accessories\BaseSimpleRing.cs" />
     <Compile Include="Assets\Scripts\Item\Armour\ArmourEnumerator.cs" />
     <Compile Include="Assets\Scripts\Item\Armour\BaseArmour.cs" />
+    <Compile Include="Assets\Scripts\Item\Armour\BaseLeatherJacket.cs" />
+    <Compile Include="Assets\Scripts\Item\Armour\BaseTShirt.cs" />
+    <Compile Include="Assets\Scripts\Item\Armour\VarsityJacket.cs" />
     <Compile Include="Assets\Scripts\Item\BaseItem.cs" />
     <Compile Include="Assets\Scripts\Item\ItemEnumerator.cs" />
     <Compile Include="Assets\Scripts\Item\Weapons\BaseBaseballBat.cs" />

@@ -12,6 +12,7 @@ public class IncreaseExperience
             Player.CurrentExp += XP;
             while (Player.CurrentExp >= Player.RequiredExp)
                 LevelUp.LevelUpCharacter(Player);
+            Debug.Log(Player.PlayerName + " Lv:" + Player.PlayerLevel + " EXP:" + Player.CurrentExp + "/" + Player.RequiredExp + " HP:" + Player.Health + "/" + Player.Health + " ATK:" + Player.Attack + " DEF:" + Player.Defence + " MAG:" + Player.Magic);
         }
     }
 }

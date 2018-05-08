@@ -7,13 +7,17 @@ public class BaseAcademicClass : BaseCharacterClass {
     public BaseAcademicClass()
     {
         CharacterClassName = "Academic";
-        Attack = 10;
+        BaseAttack = 10;
         MaxAttack = 200;
-        Defence = 10;
+        BaseDefence = 10;
         MaxDefence = 200;
-        Health = 15;
+        BaseHealth = 15;
         MaxHealth = 300;
-        Magic = 10;
+        BaseMagic = 10;
         MaxMagic = 200;
+
+        Weapon = new BaseFist();
+        Armour = new BaseTShirt();
+        Accessory = new BaseSimpleRing();
     }
 }

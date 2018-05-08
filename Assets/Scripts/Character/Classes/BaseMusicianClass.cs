@@ -7,13 +7,17 @@ public class BaseMusicianClass : BaseCharacterClass {
     public BaseMusicianClass()
     {
         CharacterClassName = "Musician";
-        Attack = 8;
+        BaseAttack = 8;
         MaxAttack = 160;
-        Defence = 8;
+        BaseDefence = 8;
         MaxDefence = 160;
-        Health = 15;
+        BaseHealth = 15;
         MaxHealth = 300;
-        Magic = 20;
+        BaseMagic = 20;
         MaxMagic = 400;
+
+        Weapon = new BaseGibbonLesPaul();
+        Armour = new BaseLeatherJacket();
+        Accessory = new BaseSimpleRing();
     }
 }
