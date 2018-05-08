@@ -4,56 +4,14 @@ using UnityEngine;
 
 public class BaseEnemy {
 
-    private string enemyName;
-    private int exp;
-    private int money;
-    private BaseEnemyClass enemyClass;
-
-
-    private int attack;
-    private int defence;
-    private int health;
-    private int magic;
-
-    public string EnemyName
-    {
-        get { return enemyName; }
-        set { enemyName = value; }
-    }
-    public int Exp
-    {
-        get { return exp; }
-        set { exp = value; }
-    }
-    public int Money
-    {
-        get { return money; }
-        set { money = value; }
-    }
-    public BaseEnemyClass EnemyClass
-    {
-        get { return enemyClass; }
-        set { enemyClass = value; }
-    }
-
-    public int Attack
-    {
-        get { return attack; }
-        set { attack = value; }
-    }
-    public int Defence
-    {
-        get { return defence; }
-        set { defence = value; }
-    }
-    public int Health
-    {
-        get { return health; }
-        set { health = value; }
-    }
-    public int Magic
-    {
-        get { return magic; }
-        set { magic = value; }
-    }
+    public string EnemyName { get; set; }  //The name of the enemy as it appears in-game
+    public int Exp { get; set; } //The amount of experience given when the enemy is defeated  
+    public int Money { get; set; } //The amount of money given when the enemy is defeated
+    public BaseEnemyClass EnemyClass { get; set; } //The enemies class
+    public int Attack { get; set; } //The attack of the enemy
+    public int Defence { get; set; } //The defence of the enemy
+    public int Health { get; set; } //The current hit points of the enemy
+    public int Magic { get; set; } //The current magic points of the enemy
+    public int MaxHealth { get; set; } //The maximum hit points of the enemy
+    public int MaxMagic { get; set; } //The maximum magic points of the enemy
 }

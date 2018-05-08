@@ -11,7 +11,7 @@ public class BaseItem
     public ItemEnumerator.ItemTypes ItemType { get; set; } //The type of item
 
     //The stat increases when item is equipped (Or used in the case of consumables)
-    public int Attack { get; set; } //The name of the item as it appears in-game
+    public int Attack { get; set; } 
     public int Defence { get; set; }
     public int Health { get; set; }
     public int Magic { get; set; }

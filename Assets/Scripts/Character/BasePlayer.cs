@@ -4,76 +4,15 @@ using UnityEngine;
 
 public class BasePlayer {
 
-    //The defining characteristics of the player
-    private string playerName;
-    private int playerLevel;
-    private BaseCharacterClass playerClass;
-    private int currentExp;
-    private int requiredExp;
-
-    //The stats of the player
-    private int attack;
-    private int defence;
-    private int health;
-    private int magic;
-
-    //The maximum HP and MP of the player
-    private int maxHealth;
-    private int maxMagic;
-
-    public string PlayerName
-    {
-        get { return playerName; }
-        set { playerName = value;}
-    }
-    public int PlayerLevel
-    {
-        get { return playerLevel; }
-        set { playerLevel = value; }
-    }
-    public int CurrentExp
-    {
-        get { return currentExp; }
-        set { currentExp = value; }
-    }
-    public int RequiredExp
-    {
-        get { return requiredExp; }
-        set {requiredExp = value; }
-    }
-    public BaseCharacterClass PlayerClass
-    {
-        get { return playerClass; }
-        set { playerClass = value; }
-    }
-    public int Attack
-    {
-        get { return attack; }
-        set { attack = value; }
-    }
-    public int Defence
-    {
-        get { return defence; }
-        set { defence = value; }
-    }
-    public int Health
-    {
-        get { return health; }
-        set { health = value; }
-    }
-    public int Magic
-    {
-        get { return magic; }
-        set { magic = value; }
-    }
-    public int MaxHealth
-    {
-        get { return maxHealth; }
-        set { maxHealth = value; }
-    }
-    public int MaxMagic
-    {
-        get { return maxMagic; }
-        set { maxMagic = value; }
-    }
+    public string PlayerName { get; set; } //Name of the character as it appears in-game
+    public int PlayerLevel { get; set; } //The level of the player
+    public int CurrentExp { get; set; } //The player's current experience
+    public int RequiredExp { get; set; } //The experience of the player required for the next level up
+    public BaseCharacterClass PlayerClass { get; set; } //The class of the character
+    public int Attack { get; set; } //The attack of the player
+    public int Defence { get; set; } //The defence of the player
+    public int Health { get; set; } //The player's current hit points
+    public int Magic { get; set; } //The player's current magic points
+    public int MaxHealth { get; set; } //The player's maximum hit points
+    public int MaxMagic { get; set; } //The player's maximum magic points
 }

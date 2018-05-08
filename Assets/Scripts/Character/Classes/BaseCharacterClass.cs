@@ -4,63 +4,18 @@ using UnityEngine;
 
 public class BaseCharacterClass
 {
-    private string characterClassName; //The name of the characters class
-    //Base stats for the class
-    private int attack;
-    private int defence;
-    private int health;
-    private int magic;
+    public string CharacterClassName { get; set; } //The name of the characters class
 
-    //Stats for the class at max level
-    private int maxAttack;
-    private int maxDefence;
-    private int maxHealth;
-    private int maxMagic;
+    //Base stats for the class at level 1
+    public int Attack { get; set; }
+    public int Defence { get; set; }
+    public int Health { get; set; }
+    public int Magic { get; set; }
 
-    public string CharacterClassName
-    {
-        get { return characterClassName; }
-        set { characterClassName = value; }
-    }
-    public int Attack
-    {
-        get { return attack; }
-        set { attack = value; }
-    }
-    public int MaxAttack
-    {
-        get { return maxAttack; }
-        set { maxAttack = value; }
-    }
-    public int Defence
-    {
-        get { return defence; }
-        set { defence = value; }
-    }
-    public int MaxDefence
-    {
-        get { return maxDefence; }
-        set { maxDefence = value; }
-    }
-    public int Health
-    {
-        get { return health; }
-        set { health = value; }
-    }
-    public int MaxHealth
-    {
-        get { return maxHealth; }
-        set { maxHealth = value; }
-    }
-    public int Magic
-    {
-        get { return magic; }
-        set { magic = value; }
-    }
-    public int MaxMagic
-    {
-        get { return maxMagic; }
-        set { maxMagic = value; }
-    }
+    //Max stats for the class at level 100
+    public int MaxAttack { get; set; }
+    public int MaxDefence { get; set; }
+    public int MaxHealth { get; set; }
+    public int MaxMagic { get; set; }
 }
 
