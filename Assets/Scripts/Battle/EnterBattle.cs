@@ -5,8 +5,6 @@ using UnityEngine;
 public class EnterBattle {
 
     private  BaseEnemy Enemy1 = new BaseEnemy();
-    private  BaseEnemy Enemy2 = new BaseEnemy();
-    private  BaseEnemy Enemy3 = new BaseEnemy();
 
     //Transitions the game the the battle scene and loads the relevent enemy data
     public void BattleStart(List<BaseEnemyClass> Enemies)
@@ -15,6 +13,7 @@ public class EnterBattle {
         {
             CreateNewEnemy(Enemy);
         }
+        Application.LoadLevel("Battle");
     }
 
     private void CreateNewEnemy(BaseEnemyClass EnemyClass)

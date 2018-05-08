@@ -15,4 +15,7 @@ public class BasePlayer {
     public int Magic { get; set; } //The player's current magic points
     public int MaxHealth { get; set; } //The player's maximum hit points
     public int MaxMagic { get; set; } //The player's maximum magic points
+    public BaseItem Weapon { get; set; } //The player's currently equipped weapon
+    public BaseItem Armour { get; set; } //The player's currently equipped armour
+    public BaseItem Accessory { get; set; } //The player's currently equipped accessory
 }

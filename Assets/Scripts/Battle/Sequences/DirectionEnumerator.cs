@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DirectionEnumerator : MonoBehaviour
+public class DirectionEnumerator
 {
     public enum NoteDirections //The possible keys which the player can press to target notes
     {

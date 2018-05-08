@@ -5,13 +5,9 @@ using UnityEngine;
 public class TestLoad : MonoBehaviour {
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
         LoadInformation.LoadAllInformation();
-        Debug.Log(GameInformation.Player1Level);
-        Debug.Log(GameInformation.Attack1);
-        Debug.Log(GameInformation.Defence1);
-        Debug.Log(GameInformation.Health1);
-        Debug.Log(GameInformation.Magic1);
 		
 	}
 	

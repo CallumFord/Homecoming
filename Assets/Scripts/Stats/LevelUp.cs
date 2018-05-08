@@ -9,23 +9,22 @@ public class LevelUp {
     private static int minLevelExp = 20;
     private static int maxLevelExp = 40000;
 
-    public static void LevelUpCharacter(BaseCharacterClass  Class, int level)
+    public static void LevelUpCharacter(BasePlayer Player)
     {
-        level += 1;
-        GameInformation.Player1Level = level;
-        AssignNewStats(Class, level);
+        Player.PlayerLevel += 1;
+        AssignNewStats(Player);
     }
 
-    private static void AssignNewStats(BaseCharacterClass Class, int level)
+    private static void AssignNewStats(BasePlayer Player)
     {
         //Assigns the player new stats by interpolating between their minimum and maximum values appropriately for their current level 
-        GameInformation.Attack1 = CalculateNewStats(Class.Attack, Class.MaxAttack, level);
-        GameInformation.Defence1 = CalculateNewStats(Class.Defence, Class.MaxDefence, level);
-        GameInformation.Magic1 = CalculateNewStats(Class.Magic, Class.MaxMagic, level);
-        GameInformation.Health1 = CalculateNewStats(Class.Health, Class.MaxHealth, level);
+        Player.Attack = CalculateNewStats(Player.PlayerClass.Attack, Player.PlayerClass.MaxAttack, Player.PlayerLevel);
+        Player.Defence = CalculateNewStats(Player.PlayerClass.Defence, Player.PlayerClass.MaxDefence, Player.PlayerLevel);
+        Player.MaxHealth = CalculateNewStats(Player.PlayerClass.Health, Player.PlayerClass.MaxHealth, Player.PlayerLevel);
+        Player.MaxMagic = CalculateNewStats(Player.PlayerClass.Magic, Player.PlayerClass.MaxMagic, Player.PlayerLevel);
 
         //Assigns the player a new experience required to reach the next level
-        GameInformation.Player1Required = CalculateNewStats(minLevelExp, maxLevelExp, level);
+        Player.RequiredExp = CalculateNewStats(minLevelExp, maxLevelExp, Player.PlayerLevel);
     }
 
     private static int CalculateNewStats(int min, int max, int position)

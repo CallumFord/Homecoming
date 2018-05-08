@@ -4,25 +4,13 @@ using UnityEngine.UI;
 
 public class TurnBasedBattle : MonoBehaviour
 {
-
     private EnterBattle EnterBattleScript = new EnterBattle();
-
-
-    public enum Battle //The possible states of the battle
-    {
-        Start,
-        PlayerTurn,
-        EnemyTurn,
-        Lose,
-        Win
-    }
-
-    private Battle currentState; //The current state of the battle
+    private BattleEnumerator.Battle currentState; //The current state of the battle
 
     // Use this for initialization
     void Start()
     {
-        currentState = Battle.Start;
+        currentState = BattleEnumerator.Battle.Start;
     }
 
     // Update is called once per frame
@@ -30,31 +18,31 @@ public class TurnBasedBattle : MonoBehaviour
     {
         switch (currentState)
         {
-            case (Battle.Start):
+            case (BattleEnumerator.Battle.Start):
                 CreatePlayerDisplay.CreatePlayer();
 
                 //Gives a list of enemies to be created when the battle starts, will need overhauling
-                var EnemyList = new List<BaseEnemyClass>();
+                List<BaseEnemyClass> EnemyList = new List<BaseEnemyClass>();
                 EnemyList.Add(new BaseSkeleton());
                 EnemyList.Add(new BaseSkeleton());
-                EnterBattleScript.BattleStart(EnemyList);
+                //EnterBattle.BattleStart(EnemyList);
 
                 //Test for note generation sequence, will eventually be moved to the EnemyTurn state along with enemy AI
                 CreateSequence.CreateTestSequence();
 
-                currentState = Battle.PlayerTurn;
+                currentState = BattleEnumerator.Battle.PlayerTurn;
                 break;
-            case (Battle.PlayerTurn):
+            case (BattleEnumerator.Battle.PlayerTurn):
                 //Setup Battle Function
                 break;
-            case (Battle.EnemyTurn):
+            case (BattleEnumerator.Battle.EnemyTurn):
                 //Setup Battle Function
                 
                 break;
-            case (Battle.Win):
+            case (BattleEnumerator.Battle.Win):
                 //Setup Battle Function
                 break;
-            case (Battle.Lose):
+            case (BattleEnumerator.Battle.Lose):
                 //Setup Battle Function
                 break;
         }

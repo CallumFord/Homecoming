@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CreateSequence : BaseNote
+public class CreateSequence:MonoBehaviour
 {
     //A list of notes to be played in sequence
     public static void CreateTestSequence()
