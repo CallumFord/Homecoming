@@ -328,7 +328,6 @@
     <Compile Include="Assets\Scripts\Saving\SaveInformation.cs" />
     <Compile Include="Assets\Scripts\Saving\SceneTransition.cs" />
     <Compile Include="Assets\Scripts\Saving\TestLoad.cs" />
-    <Compile Include="Assets\Scripts\Stats\IncreaseExperience.cs" />
     <Compile Include="Assets\Scripts\Stats\LevelUp.cs" />
     <Compile Include="Assets\Scripts\Stats\Money.cs" />
     <Compile Include="Assets\Scripts\Stats\TestLevelUp.cs" />

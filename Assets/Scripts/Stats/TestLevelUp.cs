@@ -5,7 +5,8 @@ using UnityEngine;
 public class TestLevelUp : MonoBehaviour {
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
         NewGame.NewGameInformation();
     }
 	
@@ -18,15 +19,19 @@ public class TestLevelUp : MonoBehaviour {
     {
         if(GUILayout.Button("EXP + 10"))
         {
-            IncreaseExperience.AddExperience(10);
+            LevelUp.AddExperience(10);
         }
         if (GUILayout.Button("EXP + 100"))
         {
-            IncreaseExperience.AddExperience(100);
+            LevelUp.AddExperience(100);
         }
         if (GUILayout.Button("EXP + 1000"))
         {
-            IncreaseExperience.AddExperience(1000);
+            LevelUp.AddExperience(1000);
+        }
+        if (GUILayout.Button("EXP + 10000"))
+        {
+            LevelUp.AddExperience(10000);
         }
     }
 }
