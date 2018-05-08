@@ -2,19 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour
+{
     public float moveSpeed = 10f;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
+    // Use this for initialization
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
     {
         if (Input.GetKey("a"))
         {
-            transform.Translate((Vector2.left)*moveSpeed*Time.deltaTime);
+            transform.Translate((Vector2.left) * moveSpeed * Time.deltaTime);
         }
         if (Input.GetKey("d"))
         {
@@ -27,7 +29,7 @@ public class PlayerMovement : MonoBehaviour {
         if (Input.GetKey("s"))
         {
             transform.Translate((Vector2.down) * moveSpeed * Time.deltaTime);
-            
+
         }
         if (Input.GetKeyDown("z"))
         {
@@ -37,5 +39,5 @@ public class PlayerMovement : MonoBehaviour {
         {
             //Cancel Key
         }
-	}
+    }
 }

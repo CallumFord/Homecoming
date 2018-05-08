@@ -282,8 +282,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scene\SceneTransition.cs" />
     <Compile Include="Assets\Scripts\Battle\CreatePlayerDisplay.cs" />
     <Compile Include="Assets\Scripts\Battle\EnterBattle.cs" />
+    <Compile Include="Assets\Scripts\Battle\NoteCollision.cs" />
     <Compile Include="Assets\Scripts\Battle\Sequences\BaseNote.cs" />
     <Compile Include="Assets\Scripts\Battle\Sequences\BaseSequence.cs" />
     <Compile Include="Assets\Scripts\Battle\Sequences\CreateSequence.cs" />
@@ -306,6 +308,7 @@
     <Compile Include="Assets\Scripts\Item\Weapons\BaseFist.cs" />
     <Compile Include="Assets\Scripts\Item\Weapons\BaseGibbonLesPaul.cs" />
     <Compile Include="Assets\Scripts\Item\Weapons\BaseWeapon.cs" />
+    <Compile Include="Assets\Scripts\PlayerMovement\PlayerCollision.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Saving\GameInformation.cs" />
     <Compile Include="Assets\Scripts\Saving\LoadInformation.cs" />
