@@ -2,23 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnterBattle {
+public class EnterBattle:MonoBehaviour {
 
-    private  BaseEnemy Enemy1 = new BaseEnemy();
 
     //Transitions the game the the battle scene and loads the relevent enemy data
-    public void BattleStart(List<BaseEnemyClass> Enemies)
+    public static void BattleStart(List<BaseEnemy> Enemies)
     {
-        foreach(BaseEnemyClass Enemy in Enemies)
+        foreach (BaseEnemy NewEnemy in Enemies)
         {
-            CreateNewEnemy(Enemy);
+            GameObject Enemy = (GameObject)Instantiate(Resources.Load(NewEnemy.Sprite), new Vector3(0, 0, 0), new Quaternion());
         }
-        Application.LoadLevel("Battle");
-    }
 
-    private void CreateNewEnemy(BaseEnemyClass EnemyClass)
-    {
-        Enemy1.EnemyName = EnemyClass.EnemyName;
-        Enemy1.EnemyClass = EnemyClass;
     }
 }

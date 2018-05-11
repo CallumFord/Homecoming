@@ -33,7 +33,15 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKeyDown("z"))
         {
-            Application.LoadLevel("Battle");
+            Debug.Log("COUNT!");
+            if (GameInformation.BattleStart == false)
+            {
+                GameInformation.BattleStart = true;
+                GameInformation.EnemiesList.Add(new BaseSkeleton());
+                GameInformation.EnemiesList.Add(new BaseSkeleton());
+                Application.LoadLevel("Battle");
+            }
+            
         }
         if (Input.GetKeyDown("x"))
         {

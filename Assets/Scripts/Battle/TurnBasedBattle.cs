@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class TurnBasedBattle : MonoBehaviour
 {
-    private EnterBattle EnterBattleScript = new EnterBattle();
     private BattleEnumerator.Battle currentState; //The current state of the battle
 
     // Use this for initialization
@@ -19,31 +18,33 @@ public class TurnBasedBattle : MonoBehaviour
         switch (currentState)
         {
             case (BattleEnumerator.Battle.Start):
-                CreatePlayerDisplay.CreatePlayer();
 
-                //Gives a list of enemies to be created when the battle starts, will need overhauling
-                List<BaseEnemyClass> EnemyList = new List<BaseEnemyClass>();
-                EnemyList.Add(new BaseSkeleton());
-                EnemyList.Add(new BaseSkeleton());
-                //EnterBattle.BattleStart(EnemyList);
-
-                //Test for note generation sequence, will eventually be moved to the EnemyTurn state along with enemy AI
-                CreateSequence.CreateTestSequence();
-
+                CreatePlayerDisplay.CreatePlayer(); //Creates the in-battle displays to represent the party
+                CreatePlayerDisplay.CreateEnemy(); //Creates the sprites to represent the enemies
+                CreateSequence.CreateTestSequence(); //Creates a test-sequence of notes to troubleshoot note generation
                 currentState = BattleEnumerator.Battle.PlayerTurn;
                 break;
             case (BattleEnumerator.Battle.PlayerTurn):
-                //Setup Battle Function
+                foreach (BasePlayer Player in GameInformation.PartyList)
+                {
+                //Provide the player with a menu of battle commands
+                //Execute player attack
+                //Check if enemy is defeated and if so, remove them from EnemyList
+                //If EnemyList is empty, the player wins
+                }
+                //Change to enemy turn
                 break;
             case (BattleEnumerator.Battle.EnemyTurn):
-                //Setup Battle Function
-                
+                //Generate sequence of notes for the enemies
+                //Check if all players are defeated and if so, the player loses
+                //Change to player turn
                 break;
             case (BattleEnumerator.Battle.Win):
-                //Setup Battle Function
+                //Provide party with Exp and Money
+                //Return to World
                 break;
             case (BattleEnumerator.Battle.Lose):
-                //Setup Battle Function
+                //Return player to most recent check-point
                 break;
         }
 

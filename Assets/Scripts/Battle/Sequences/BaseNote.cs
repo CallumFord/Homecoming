@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseNote : MonoBehaviour {
+public class BaseNote {
 
     public DirectionEnumerator.NoteDirections NoteDirection { get; set; } //Which key the player will have to press to hit this note
     public TypeEnumerator.NoteTypes NoteType { get; set; } //The type of this note

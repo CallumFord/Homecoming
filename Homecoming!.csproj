@@ -299,8 +299,7 @@
     <Compile Include="Assets\Scripts\Character\Classes\BaseHeroClass.cs" />
     <Compile Include="Assets\Scripts\Character\Classes\BaseMusicianClass.cs" />
     <Compile Include="Assets\Scripts\Enemy\BaseEnemy.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyClasses\BaseEnemyClass.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyClasses\BaseSkeleton.cs" />
+    <Compile Include="Assets\Scripts\Enemy\BaseSkeleton.cs" />
     <Compile Include="Assets\Scripts\Item\Accessories\AccessoryEnumerator.cs" />
     <Compile Include="Assets\Scripts\Item\Accessories\BaseAccessory.cs" />
     <Compile Include="Assets\Scripts\Item\Accessories\BaseLeatherBelt.cs" />

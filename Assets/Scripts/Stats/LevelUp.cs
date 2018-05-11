@@ -43,21 +43,12 @@ public class LevelUp {
 
     private static int CalculateNewStats(int min, int max, int current)
     {
-        float x = 0.0835171f;
-        float y = 0.0498028f;
-        int newStat = max*(int)(x * Mathf.Exp(y * current));
 
-        //float c = max / min; ;
-        //float b = Mathf.Log(c) / (maxLevel - 1);
-        //float a = (min / Mathf.Exp(b));
-        //int newStat =(int)(a * Mathf.Exp(b * current));
+        float c = max / min;
+        float b = Mathf.Log(c) / (maxLevel - 1);
+        float a = (min / Mathf.Exp(b));
+        int newStat =(int)(a * Mathf.Exp(b * current));
 
         return newStat;
-    }
-    private static int CalculateRequiredExp(int min, int max, int current)
-    {
-        //New curve goes here
-        int newExp = 0;
-        return newExp;
     }
 }

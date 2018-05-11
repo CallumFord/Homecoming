@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseSkeleton : BaseEnemyClass {
+public class BaseSkeleton : BaseEnemy {
 
     public BaseSkeleton()
     {
@@ -12,7 +12,11 @@ public class BaseSkeleton : BaseEnemyClass {
 
         Attack = 5;
         Defence = 5;
-        Health = 10;
-        Magic = 0;
+        MaxHealth = 10;
+        MaxMagic = 0;
+        Health = MaxHealth;
+        Magic = MaxMagic;
+
+        Sprite = "SKELETON";
     }
 }
