@@ -33,7 +33,6 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKeyDown("z"))
         {
-            Debug.Log("COUNT!");
             if (GameInformation.BattleStart == false)
             {
                 GameInformation.BattleStart = true;

@@ -21,7 +21,6 @@ public class CreatePlayerDisplay : MonoBehaviour {
         float xpos = -4f; //The xposition for generating player Battle Displays and Portraits
         foreach (BaseEnemy Enemy in GameInformation.EnemiesList)
         {
-            Debug.Log("ENEMY CREATED");
             GameObject EnemyDisplay = (GameObject)Instantiate(Resources.Load(Enemy.Sprite), new Vector3(xpos, 4.6f, 0), new Quaternion());
             xpos += 3.0f;
         }

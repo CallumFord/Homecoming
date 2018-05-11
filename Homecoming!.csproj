@@ -287,9 +287,9 @@
     <Compile Include="Assets\Scripts\Battle\EnterBattle.cs" />
     <Compile Include="Assets\Scripts\Battle\NoteCollision.cs" />
     <Compile Include="Assets\Scripts\Battle\Sequences\BaseNote.cs" />
-    <Compile Include="Assets\Scripts\Battle\Sequences\BaseSequence.cs" />
     <Compile Include="Assets\Scripts\Battle\Sequences\CreateSequence.cs" />
     <Compile Include="Assets\Scripts\Battle\Sequences\DirectionEnumerator.cs" />
+    <Compile Include="Assets\Scripts\Battle\Sequences\PlaySequence.cs" />
     <Compile Include="Assets\Scripts\Battle\Sequences\TypeEnumerator.cs" />
     <Compile Include="Assets\Scripts\Battle\TurnBasedBattle.cs" />
     <Compile Include="Assets\Scripts\Character\BasePlayer.cs" />

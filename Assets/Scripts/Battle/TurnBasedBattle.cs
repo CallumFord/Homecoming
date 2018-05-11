@@ -22,6 +22,7 @@ public class TurnBasedBattle : MonoBehaviour
                 CreatePlayerDisplay.CreatePlayer(); //Creates the in-battle displays to represent the party
                 CreatePlayerDisplay.CreateEnemy(); //Creates the sprites to represent the enemies
                 CreateSequence.CreateTestSequence(); //Creates a test-sequence of notes to troubleshoot note generation
+                PlaySequence Sequence = gameObject.AddComponent<PlaySequence>() as PlaySequence; //Plays the test-sequence of notes
                 currentState = BattleEnumerator.Battle.PlayerTurn;
                 break;
             case (BattleEnumerator.Battle.PlayerTurn):
