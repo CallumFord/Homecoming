@@ -77,9 +77,24 @@ public class PlaySequence : MonoBehaviour {
                         break;
                     }
             }
-            Vector3 position = new Vector3(xpos, +1f, 0);
-            GameObject newNote = (GameObject)Instantiate(Resources.Load(type), position, new Quaternion());
-            yield return new WaitForSeconds(noteSpacing);
+            Vector3 position = new Vector2(xpos, +1f);
+
+            GameObject newNote = new GameObject("Note"); //Creates a game object named "Note" to represent the NOte
+
+            SpriteRenderer noteSpriteRenderer = newNote.AddComponent<SpriteRenderer>(); //Adds a sprite renderer to the note
+            noteSpriteRenderer.sprite = Resources.Load<Sprite>(type); //Assigns the note a sprite based on it's type
+            noteSpriteRenderer.sortingLayerName = "Foreground"; //Moves the note sprite to the background
+
+            Rigidbody2D noteRigidBody = newNote.AddComponent<Rigidbody2D>(); //Adds a rigid body 2D component to the note
+            noteRigidBody.simulated = true; //Simulates motion of the note, enabling gravity and collisions
+
+            CircleCollider2D noteCollider = newNote.AddComponent<CircleCollider2D>(); //Adds a collider to the note
+
+            newNote.AddComponent<NoteCollision>(); //Adds the NoteCollision.cs script to handle collisions
+
+            newNote.transform.position = position; //Moves the note to it's starting position
+
+            yield return new WaitForSeconds(1f); //The delay before running the Coroutine again for the next note
         }
     }
 }

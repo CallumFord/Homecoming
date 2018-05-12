@@ -7,6 +7,8 @@ public class NewGame:MonoBehaviour
 
     public static void NewGameInformation()
     {
+        GameObject GameInformationObject = new GameObject("GameInformation"); //Creates a game object to keep track of all game information
+        GameInformationObject.AddComponent<GameInformation>(); //Assigns the GameInformation.cs script to GameInformationObject
 
         //Creates instances of player objects in order to set up initial game 
         BasePlayer Player1 = new BasePlayer() {PlayerClass = new BaseHeroClass()} ;
@@ -25,5 +27,10 @@ public class NewGame:MonoBehaviour
         GameInformation.AddPlayer(Player4);
 
         GameInformation.AddToParty(Player1); //Adds the player character to the party
+        GameInformation.AddToParty(Player2); //Adds the player character to the party
+        GameInformation.AddToParty(Player3); //Adds the player character to the party
+        GameInformation.AddToParty(Player4); //Adds the player character to the party
+
+        CreatePlayer.CreatePlayerObject(new Vector2 (0,0)); //Creates the player object in the centre of the world map
     }
 }

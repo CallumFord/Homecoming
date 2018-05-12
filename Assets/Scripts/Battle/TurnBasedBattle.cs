@@ -26,14 +26,15 @@ public class TurnBasedBattle : MonoBehaviour
                 currentState = BattleEnumerator.Battle.PlayerTurn;
                 break;
             case (BattleEnumerator.Battle.PlayerTurn):
+                //CreatePlayerDisplay.CreateBattlePanel();
                 foreach (BasePlayer Player in GameInformation.PartyList)
                 {
-                //Provide the player with a menu of battle commands
-                //Execute player attack
-                //Check if enemy is defeated and if so, remove them from EnemyList
-                //If EnemyList is empty, the player wins
+                    //Creates a menu of 
+                    //Execute player attack
+                    //Check if enemy is defeated and if so, remove them from EnemyList
+                    //If EnemyList is empty, the player wins
                 }
-                //Change to enemy turn
+                currentState = BattleEnumerator.Battle.EnemyTurn;
                 break;
             case (BattleEnumerator.Battle.EnemyTurn):
                 //Generate sequence of notes for the enemies

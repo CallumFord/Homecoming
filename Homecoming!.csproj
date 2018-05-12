@@ -318,6 +318,7 @@
     <Compile Include="Assets\Scripts\Item\Weapons\BaseGibbonLesPaul.cs" />
     <Compile Include="Assets\Scripts\Item\Weapons\BaseWeapon.cs" />
     <Compile Include="Assets\Scripts\Item\Weapons\WeaponEnumerator.cs" />
+    <Compile Include="Assets\Scripts\PlayerMovement\CreatePlayer.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement\PlayerCollision.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Saving\GameInformation.cs" />
@@ -325,8 +326,6 @@
     <Compile Include="Assets\Scripts\Saving\NewGame.cs" />
     <Compile Include="Assets\Scripts\Saving\PPSerialization.cs" />
     <Compile Include="Assets\Scripts\Saving\SaveInformation.cs" />
-    <Compile Include="Assets\Scripts\Saving\SceneTransition.cs" />
-    <Compile Include="Assets\Scripts\Saving\TestLoad.cs" />
     <Compile Include="Assets\Scripts\Stats\LevelUp.cs" />
     <Compile Include="Assets\Scripts\Stats\Money.cs" />
     <Compile Include="Assets\Scripts\Stats\TestLevelUp.cs" />
