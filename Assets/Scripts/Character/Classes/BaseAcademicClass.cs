@@ -19,5 +19,7 @@ public class BaseAcademicClass : BaseCharacterClass {
         Weapon = new BaseFist();
         Armour = new BaseTShirt();
         Accessory = new BaseSimpleRing();
+
+        PortraitSprite = "Player_Portrait";
     }
 }

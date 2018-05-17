@@ -18,7 +18,6 @@ public class TurnBasedBattle : MonoBehaviour
         switch (currentState)
         {
             case (BattleEnumerator.Battle.Start):
-
                 CreatePlayerDisplay.CreatePlayer(); //Creates the in-battle displays to represent the party
                 CreatePlayerDisplay.CreateEnemy(); //Creates the sprites to represent the enemies
                 CreateSequence.CreateTestSequence(); //Creates a test-sequence of notes to troubleshoot note generation
@@ -26,7 +25,10 @@ public class TurnBasedBattle : MonoBehaviour
                 currentState = BattleEnumerator.Battle.PlayerTurn;
                 break;
             case (BattleEnumerator.Battle.PlayerTurn):
-                //CreatePlayerDisplay.CreateBattlePanel();
+                CreateBattleCanvas.BattleCanvas("BattleCanvas"); //Creates
+                CreatePlayerDisplay.CreateBattlePanel();
+
+
                 foreach (BasePlayer Player in GameInformation.PartyList)
                 {
                     //Creates a menu of 

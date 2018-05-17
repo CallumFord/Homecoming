@@ -19,5 +19,7 @@ public class BaseAthleteClass : BaseCharacterClass {
         Weapon = new BaseBaseballBat();
         Armour = new VarsityJacket();
         Accessory = new BaseSimpleNecklace();
+
+        PortraitSprite = "Player_Portrait";
     }
 }

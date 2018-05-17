@@ -21,5 +21,7 @@ public class BaseCharacterClass
     public BaseItem Weapon { get; set; } //The player's currently equipped weapon
     public BaseItem Armour { get; set; } //The player's currently equipped armour
     public BaseItem Accessory { get; set; } //The player's currently equipped accessory
+
+    public string PortraitSprite { get; set; } //The sprite that represents the player's portrait in-battle
 }
 

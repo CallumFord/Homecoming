@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Tilemap_Exterior_1
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300002, guid: a4df1176b4c17094ab649df6f65f5b85, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 3dbe3ac4cb1856d43844ac6b9ee4e983, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

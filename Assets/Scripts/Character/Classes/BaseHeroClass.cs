@@ -19,5 +19,7 @@ public class BaseHeroClass : BaseCharacterClass
         Weapon = new BaseFist();
         Armour = new BaseTShirt();
         Accessory = new BaseLeatherBelt();
+
+        PortraitSprite = "Player_Portrait";
     }
 }

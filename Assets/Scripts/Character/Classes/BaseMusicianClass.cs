@@ -19,5 +19,7 @@ public class BaseMusicianClass : BaseCharacterClass {
         Weapon = new BaseGibbonLesPaul();
         Armour = new BaseLeatherJacket();
         Accessory = new BaseSimpleRing();
+
+        PortraitSprite = "Player_Portrait";
     }
 }

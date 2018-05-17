@@ -283,6 +283,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Battle\BattleEnumerator.cs" />
+    <Compile Include="Assets\Scripts\Battle\CreateBattleCanvas.cs" />
     <Compile Include="Assets\Scripts\Battle\CreatePlayerDisplay.cs" />
     <Compile Include="Assets\Scripts\Battle\EnterBattle.cs" />
     <Compile Include="Assets\Scripts\Battle\NoteCollision.cs" />
